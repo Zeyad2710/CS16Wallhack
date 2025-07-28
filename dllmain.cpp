@@ -25,7 +25,7 @@ DWORD WINAPI ToggleThread(LPVOID) {
     while (true) {
         if (GetAsyncKeyState(VK_F1) & 1) {
             espEnabled = !espEnabled;
-            OutputDebugStringA(espEnabled ? "[ESP] ON\n" : "[ESP] OFF\n");
+            MessageBoxA(NULL, espEnabled ? "Wallhack Toggled On!" : "Wallhack Toggled Off!", "CS16Wallhack", MB_OK);
         }
         Sleep(100);
     }
